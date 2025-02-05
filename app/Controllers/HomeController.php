@@ -1,8 +1,12 @@
 <?php
 namespace App\Controllers;
 
+use App\Models\Category;
+
 class HomeController {
     public function index(){
+        $categories = Category::all();
+        print_r($categories);
         return view('home');
     }
     public function contact(){
