@@ -1,0 +1,20 @@
+.hero{
+    display: flex;
+}
+.ads{
+    padding-left: 50px;
+    padding-top: 18px;
+
+}
+.ads-c{
+    display: flex;
+    padding-top: 30px;
+}
+.title-ads{
+    padding-left: 10px;
+}
+hr {
+    height: 5px; /* Độ dày của đường */
+    background-color: black; /* Màu sắc */
+    border: none; /* Loại bỏ viền mặc định */
+}
