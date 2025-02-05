@@ -2,6 +2,7 @@
 namespace App\Models;
 
 use PDO;
+use PDOException;
 
 class database{
     protected $conn = null;
@@ -9,6 +10,13 @@ class database{
     protected $prmkey = 'id';
     protected $sql;
     public function __construct(){
-        $this->conn = new PDO("mysql:host=localhost;dbname=db_news","root","");
+        try {
+            $this->conn = new PDO("mysql:host=localhost;dbname=db_news","root","");
+        } catch (PDOException $e) {
+          echo "Lỗi kết nối".$e->getMessage();
+        }
+    }
+    public static function all(){
+        
     }
 }
