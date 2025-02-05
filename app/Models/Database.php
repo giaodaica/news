@@ -17,6 +17,10 @@ class database{
         }
     }
     public static function all(){
-        
+        $model = new static;
+        $model->sql = "SELECT * FROM $model->table";
+        $stmt = $model->conn->prepare($model->sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
     }
 }
